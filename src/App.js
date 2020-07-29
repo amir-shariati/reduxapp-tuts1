@@ -14,11 +14,19 @@ class App extends React.Component{
     }
 
     increment(){
-        console.log('Increment');
+        this.setState( (prevState) => {
+            return {
+                count: prevState.count +1
+            }
+        })
     }
 
     decrement(){
-        console.log('Decrement');
+        this.setState( prevState => {
+            return {
+                count: prevState.count -1
+            }
+        })
     }
 
     render() {
